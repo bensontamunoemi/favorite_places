@@ -29,6 +29,13 @@ class PlaceCard extends StatelessWidget {
         leading: CircleAvatar(
           backgroundImage: FileImage(places[index].image),
         ),
+        subtitle: Text(
+          places[index].location.address,
+          style: Theme.of(context)
+              .textTheme
+              .bodySmall!
+              .copyWith(color: Theme.of(context).colorScheme.onBackground),
+        ),
         title: Text(
           places[index].title,
           style: Theme.of(context)
